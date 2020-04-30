@@ -1,0 +1,122 @@
+export default [
+        {
+            "activityId": 2,
+            "activityName": "哪吒之魔童降世",
+            "userId": "123456",
+            "avatar": "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/948DD79341AF0F424EB2686FE61B77DD.jpg",
+            "activityType": "电影",
+            "locationName": "星影国际影城",
+            "longitude": 112.92255,
+            "latitude": 27.89638,
+            "beginTime": "今天 7:00",
+            "endTime": "今天 9:00",
+            "genderLimit": "男",
+            "totalCount": 4,
+            "remark": "hello world!!!",
+            "lookCount": 10,
+            "images": "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/156880117804495.png,https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/156880117805763.png,https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/1568801178065125.png",
+            "publishTime": "2019-09-18 06:26:00",
+            "commentCount": 20,
+            "userNickname": "自明小友",
+            "imageList": [
+                "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/p2563815625.jpg",
+                "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/p2563815626.jpg",
+                "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/p2564563322.jpg",
+                "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/p2563815622.jpg"
+            ]
+        },
+        {
+            "activityId": 3,
+            "activityName": "哪吒之魔童降世2",
+            "userId": "123",
+            "avatar": "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/v2-34a3387ce1a1e5a4aa9bc48fca19a677.jpg",
+            "activityType": "电影",
+            "locationName": "星影国际影城",
+            "longitude": 112.92255,
+            "latitude": 27.89638,
+            "beginTime": "明天 8:00",
+            "endTime": "明天 10:00",
+            "genderLimit": "女",
+            "totalCount": 4,
+            "remark": "hello world!!!",
+            "lookCount": 201,
+            "images": "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/156880117804495.png,https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/156880117805763.png",
+            "publishTime": "2019-09-18 06:48:12",
+            "commentCount": 2,
+            "userNickname": "灵笼",
+            "imageList": [
+                "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/p2563815626.jpg",
+                "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/156880117805763.png"
+            ]
+        },
+        {
+            "activityId": 9,
+            "activityName": "篮球杯",
+            "userId": "123",
+            "avatar": "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/v2-34a3387ce1a1e5a4aa9bc48fca19a677.jpg",
+            "activityType": "运动",
+            "locationName": "湖南科技大学-体育馆",
+            "longitude": 112.87012,
+            "latitude": 27.88018,
+            "beginTime": "今天 10:00",
+            "endTime": "今天 12:00",
+            "genderLimit": "不限",
+            "totalCount": 5,
+            "remark": "就问你敢不敢",
+            "lookCount": 2,
+            "images": "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/156924890589345.png",
+            "publishTime": "2019-09-23 10:37:13",
+            "commentCount": 0,
+            "userNickname": "灵笼",
+            "imageList": [
+                "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/156924890589345.png"
+            ]
+        },
+        {
+            "activityId": 10,
+            "activityName": "足球杯",
+            "userId": "123",
+            "avatar": "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/v2-34a3387ce1a1e5a4aa9bc48fca19a677.jpg",
+            "activityType": "运动",
+            "locationName": "湖南科技大学北校-体育馆",
+            "longitude": 112.91546,
+            "latitude": 27.91021,
+            "beginTime": "今天 10:11",
+            "endTime": "今天 11:00",
+            "genderLimit": "男",
+            "totalCount": 5,
+            "remark": "是兄弟就来一决胜负",
+            "lookCount": 0,
+            "images": "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/156924890589345.png,https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/15692489987097.png",
+            "publishTime": "2019-09-23 10:27:48",
+            "commentCount": 0,
+            "userNickname": "灵笼",
+            "imageList": [
+                "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/156924890589345.png",
+                "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/15692489987097.png"
+            ]
+        },
+        {
+            "activityId": 8,
+            "activityName": "组队旅游",
+            "userId": "123456",
+            "avatar": "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/948DD79341AF0F424EB2686FE61B77DD.jpg",
+            "activityType": "旅游",
+            "locationName": "韶山旅游区",
+            "longitude": 112.492021,
+            "latitude": 27.906229,
+            "beginTime": "明天 9:00",
+            "endTime": "明天 8:50",
+            "genderLimit": "女",
+            "totalCount": 3,
+            "remark": "国庆七天假，不旅游干嘛",
+            "lookCount": 1,
+            "images": "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/1569248663801136.png",
+            "publishTime": "2019-09-23 10:40:00",
+            "commentCount": 0,
+            "userNickname": "自明小友",
+            "imageList": [
+                "https://lidongming.oss-cn-shenzhen.aliyuncs.com/images/1569248663801136.png"
+            ]
+        }
+    ];

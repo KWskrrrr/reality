@@ -1,0 +1,65 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.line{
+  width: 100%;
+  height: 20rpx;
+  background: #eee;
+}
+.theme{
+  font-size: 25rpx;
+  color: rgb(80, 206, 22);
+  background: #eee;
+  border-radius: 40rpx;
+  padding: 5rpx 18rpx;
+  text-align: center;
+  margin-right: 30rpx;
+}
+.publish {
+      position: fixed;
+      right: 30rpx;
+      bottom: 50rpx;
+}
+
+.publish image {
+      width: 100rpx;
+      height: 100rpx;
+      z-index: 9;
+}
+.no-more-goods{
+  text-align: center;
+  font-size: 24rpx;
+  padding-bottom:300rpx; 
+  color: #999;
+  background: #eee;
+}
+.nocontent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.nocontent image {
+  padding-left: 80rpx;
+  padding-top: 80rpx;
+  width: 340rpx;
+  height: 272rpx;
+}
+
+.blank_text {
+  padding-top: 40rpx;
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+  color: #c6c6c8;
+}

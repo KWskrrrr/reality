@@ -1,0 +1,89 @@
+.info{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2rpx solid #eee;
+  margin-bottom: 20rpx;
+  padding-top: 10rpx;
+}
+.info image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+  z-index: 99;
+}
+.text{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rpx;
+}
+.time{
+  font-size: 20rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+.content{
+  width: 100%;
+}
+.content_wrap{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.content_item{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8rpx 0;
+}
+.content_item text{
+  color: rgb(70, 68, 68);
+}
+.circle{
+  width: 20rpx;
+  height: 20rpx;
+  background: rgb(62, 159, 238);
+  border-radius: 50%;
+  margin-left: 40rpx;
+  margin-right: 15rpx;
+}
+
+.picture{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.picture image{ 
+  box-sizing: border-box;
+  background-color: white;
+  flex: 0 0 28%;
+  height: 100px;
+  margin-top: 4%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.view_comment{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.view_comment image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.view_comment text{
+  font-size: 28rpx;
+  margin-left: 5rpx;
+  
+}

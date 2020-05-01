@@ -1,0 +1,71 @@
+/* pages/chatting/chatting.wxss */
+.msgBox{
+  margin-bottom: 120rpx;
+  display: flex;
+  flex-direction: column;
+}
+.msgItem{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.msgItemReverse{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.adverseHeadimg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+  overflow: hidden;
+}
+.textBox{
+  padding: 15rpx 20rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  box-shadow: 2rpx 2rpx 2rpx #999;
+  background: #eee;
+}
+.textGreen{
+  background: rgb(39, 204, 24);
+  color: #fff;
+}
+.timeTip{
+  font-size: 25rpx;
+  width: 300rpx;
+  height: 25rpx;
+  margin: 20rpx auto;
+  color: #999;
+  text-align: center;
+}
+.inputBox{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.inputContent{
+  width: 80%;
+  height: 60rpx;
+  border-radius: 50rpx;
+  background: #eee;
+}
+.btnSendMsg{
+  width: 15%;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 30rpx;
+  text-align: center;
+  color: #fff;
+  background: rgb(39, 204, 24);
+  border: 2rpx solid rgb(62, 124, 57);
+  border-radius: 20rpx;
+}

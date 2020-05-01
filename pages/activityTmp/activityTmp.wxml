@@ -1,0 +1,41 @@
+<block wx:for="{{dataFromParent}}">
+<!-- 用户信息 -->
+<view class="info">
+<image src="{{item.avatar}}" bindtap="goPersonal" data-id="{{item.userId}}"></image>
+<view class="text">
+<view class="username">{{item.userNickname}}</view>
+<view class="time">{{item.publishTime}}</view>
+</view>
+<view class="theme">{{item.activityType}}</view>
+</view>
+<!-- 活动详情 -->
+<view class="content">
+<view class="content_wrap">
+<view class="content_item">
+<view class="circle"></view>
+<text>{{item.activityName}}</text>
+</view>
+<view class="content_item">
+<view class="circle"></view>
+<text>{{item.beginTime}}--{{item.endTime}}</text>
+</view>
+<view class="content_item">
+<view class="circle"></view>
+<text>{{item.locationName}}</text>
+</view>
+</view>
+<view class="picture">
+<block class="picture" wx:for="{{item.imageList}}" wx:key="{{index}}">
+<image src="{{item}}" class="picture_item"></image>
+</block>
+</view>
+<!-- 阅读评论 -->
+<view class='view_comment'>
+<image src='/icons/browse.png'></image>
+<text>{{item.viewCount}}</text>
+<image src='/icons/comments.png'></image>
+<text>{{item.commentCount}}</text>
+<image src="/icons/ellipsis.png"></image>
+</view>
+</view>
+</block>

@@ -1,0 +1,22 @@
+<!--pages/chatting/chatting.wxml-->
+<view>
+<view class="msgBox">
+<view wx:for="{{talkContent}}" wx:key="{{index}}">
+<view class="timeTip">{{item.publishTime}}</view>
+<view class="msgItem {{item.userId==userId?'msgItemReverse':''}}">
+<view class="adverseHeadimg" wx:if="{{item.userId==userId}}" data-id="{{userId}}" bindtap="goPersonal"><open-data type="userAvatarUrl"></open-data></view>
+<image class="adverseHeadimg" wx:else src="{{toAvatar}}" data-id="{{item.userId}}" bindtap="goPersonal"></image>
+<text class="textBox {{item.userId==userId?'textGreen':''}}" selectable="true">{{item.msg}}</text>
+</view>
+
+</view>
+</view>
+
+<!-- 底部input -->
+<view class="inputBox">
+<input class="inputContent" type="text" value="{{userInputContent}}"
+bindinput="contentInput"></input>
+<view class="btnSendMsg" bindtap="sendMsg">发送</view>
+</view>
+
+</view>

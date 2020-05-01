@@ -1,0 +1,63 @@
+<view>
+<view class="line"></view>
+<view class="panel_item">
+<text>活动名</text>
+<input type="text" class="activityName" placeholder="请输入" value="{{activityName}}" bindinput="activityNameInput"></input>
+</view>
+<view class="panel_item">
+<text>主题</text>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{theme}}">
+    <view class="picker">
+      当前选择：{{theme[index]}}
+    </view>
+  </picker>
+</view>
+<view class="panel_item">
+<text>地点</text>
+<view bindtap="chooseAddress" class="chooseAddress">
+<input disabled placeholder='请选择地点' value="{{locationName}}"></input>
+<image src="/icons/address.png"></image>
+</view>
+</view>
+<view class="panel_item">
+<text>开始时间</text>
+<picker mode="time" value="{{startTime}}" start="09:01" end="21:01"  bindchange="bindstartTime">
+    <view class="picker">
+      当前选择: {{beginTime}}
+    </view>
+  </picker>
+</view>
+<view class="panel_item">
+<text>结束时间</text>
+<picker mode="time" value="{{endTime}}" start="09:01" end="21:01" bindchange="bindendTime">
+    <view class="picker">
+      当前选择: {{endTime}}
+    </view>
+  </picker>
+</view>
+<view class="panel_item">
+<text>要求</text>
+<input  type="text" class="activityName" placeholder="请输入" value="{{require}}" bindinput="requireInput"></input>
+</view>
+
+<view class="line"></view>
+<view class="panel_item">
+<text>图片上传</text>
+<input></input>
+</view>
+<view class="upload">
+<view wx:for="{{imageList}}" wx:key="{{index}}" class="uploadImg">
+<image wx:if="{{index<6}}" src="{{item}}"></image>
+</view>
+<view class="uploadIcon" bindtap="uploadImg">
+<image src="/icons/upload.png"></image>
+</view>
+
+</view>
+
+<textarea placeholder="备注" value="{{remark}}" bindinput="remarkInput"></textarea>
+
+<view class="btnWrap">
+<button bindtap="publish" class="publishBtn">发布</button>
+</view>
+</view>

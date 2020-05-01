@@ -1,0 +1,26 @@
+<!--pages/notice/notice.wxml-->
+<block wx:for="{{notice}}" wx:key="{{index}}">
+      <view class="list_item">
+      <image src="{{item.avatar}}" data-id="{{item.userId}}" bindtap="goPersonal"></image>
+      <view data-index="{{item.activityId}}" bindtap="toDetail">
+      <text>{{item.userNickname}}</text>
+      <text class="ellipsis">申请加入{{item.activityName}}</text>
+      <text>{{item.publishTime}}</text>
+      </view>
+      <view class="option" wx:if="{{item.applyStatus==0}}">
+      <view bindtap="agreeApply" data-id="{{item.userId}}" data-activityid="{{item.activityId}}" >同意</view>
+      <view bindtap="disagreeApply" data-id="{{item.userId}}" data-activityid="{{item.activityId}}">拒绝</view>
+      </view>
+
+      <view wx:elif="{{item.applyStatus==1}}" class="status">
+      已拒绝
+      </view>
+      <view wx:else class="status">
+      已同意
+      </view>
+      </view>
+</block>
+<view class="nocontent" wx:if="{{notice.length==0}}">
+      <image lazy-load src="/images/blank.png"></image>
+      <view class="blank_text">暂时还没有通知~</view>
+</view>

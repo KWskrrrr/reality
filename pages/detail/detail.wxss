@@ -1,0 +1,232 @@
+/* pages/detail/detail.wxss */
+@import '/pages/commentTmp/commentTmp.wxss';
+swiper{
+  width: 100%;
+  height: 400rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+.info{
+  width: 100%;
+  height: 140rpx;
+  margin-top: 400rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #eee;
+}
+.info image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+}
+.text{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rpx;
+}
+.time{
+  font-size: 20rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+.badge{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 30rpx;
+}
+.badge .join{
+  font-size: 25rpx;
+  color: rgb(80, 206, 22);
+  background: #eee;
+  border-radius: 40rpx;
+  padding: 5rpx 18rpx;
+  text-align: center;
+  margin-right: 15rpx;
+}
+.badge button{
+  border: 0;
+  font-size: 25rpx;
+  color: #ff6029;
+  background: #eee;
+  border-radius: 40rpx;
+  padding: 5rpx 18rpx;
+  text-align: center;
+}
+/* 面板样式 */
+.detail_wrap{
+  width: 100%;
+}
+.detail_item{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.detail_icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  margin-left: 30rpx;
+}
+.detail_item text{
+  flex: 1;
+  color: rgb(100, 100, 100);
+}
+.detail_item view{
+   color: rgb(100, 100, 100);
+   margin-right: 30rpx;
+}
+.comment{
+  width: 100%;
+}
+.comment_top{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2rpx solid #eee;
+}
+.circle{
+  width: 20rpx;
+  height: 20rpx;
+  background: rgb(247, 148, 55);
+  border-radius: 50%;
+  margin-left: 30rpx;
+  margin-right: 15rpx;
+}
+.comment_top text{
+  flex: 1;
+}
+.comment_btn{
+  width: 120rpx;
+  height: 50rpx;
+  display: inline-block;
+  line-height: 50rpx;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  font-size: 25rpx;
+  background: rgb(20, 185, 15);
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+.commentWrap{
+  width: 100%;
+  border-bottom: 1rpx solid #eee;
+}
+.commentTmp_top{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.commentTmp_top image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+.name_content{
+  display: flex;
+  flex-direction: column;
+}
+.name_content text:last-child{
+  color: #999;
+  font-size: 35rpx;
+  margin-top: 10rpx;
+}
+.commentTmp_bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+  margin-bottom: 10rpx;
+}
+.commentTime{
+  flex: 1;
+  color: #999;
+  font-size: 25rpx;
+  margin-left: 100rpx;
+}
+.commentReplyCount {
+  height: 25rpx;
+  line-height: 25rpx;
+  display: inline-block;
+  vertical-align: middle;
+  background: #eee;
+  padding: 10rpx 20rpx;
+  border-radius: 50rpx;
+}
+/* 发表评论 */
+
+.release {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #eee;
+  border-bottom: 10rpx solid #eee;
+  z-index: 999;
+}
+ 
+.replyinfo1{ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 64rpx;
+}
+.replyinfo2{ 
+  width: 100%;
+  height: 64rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+ 
+.release textarea {
+  width: 550rpx;
+  min-height: 64rpx;
+  max-height: 128rpx; /*最多显示三行*/
+  line-height: 64rpx;
+  font-size: 28rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+ 
+.release .text {
+  color: #c9c9c9;
+}
+ 
+.cancel {
+  width: 150rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #ff6029;
+  background: #eee;
+}
+ 
+.release .submit {
+  width: 120rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  background: #ff6029;
+  color: #fff;
+  border-radius: 20rpx;
+  font-size: 30rpx;
+}

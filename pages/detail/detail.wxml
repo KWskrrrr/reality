@@ -1,0 +1,104 @@
+<!-- <import src="/pages/commentTmp/commentTmp.wxml"/> -->
+<view>
+<swiper indicator-dots autoplay>
+<block wx:for="{{detailObj.imageList}}" wx:key="{{index}}">
+<swiper-item>
+<image src='{{item}}'></image>
+</swiper-item>
+</block>
+</swiper>
+<view class="info">
+<image src="{{detailObj.avatar}}" data-id="{{detailObj.userId}}" bindtap="goPersonal"></image>
+<view class="text">
+<view class="username">{{detailObj.userNickname}}</view>
+<view class="time">{{detailObj.publishTime}}</view>
+</view>
+<view class="badge" >
+<view wx:if="{{detailObj.userId!=userId}}">
+<view class="join" wx:if="{{detailObj.isJoined}}" bindtap="cancleJoin">已加入</view>
+<view class="join" wx:else bindtap="join" bindtap="join">加入</view>
+</view>
+<button open-type="share" style="width:90rpx;height:40rpx">分享</button>
+</view>
+</view>
+<view class="line"></view>
+<!-- 详细面板 -->
+<view class="detail_wrap" bindtap="hide">
+<view class="detail_item">
+<image class="detail_icon" src="/icons/detail_icon/name.png"></image>
+<text>活动名</text>
+<view>{{detailObj.activityName}}</view>
+</view>
+<view class="detail_item">
+<image class="detail_icon" src="/icons/detail_icon/theme.png"></image>
+<text>主题</text>
+<view class="theme">{{detailObj.activityType}}</view>
+</view>
+<view class="detail_item">
+<image class="detail_icon" src="/icons/detail_icon/starttime.png"></image>
+<text>开始时间</text>
+<view>{{detailObj.beginTime}}</view>
+</view>
+<view class="detail_item">
+<image class="detail_icon" src="/icons/detail_icon/endtime.png"></image>
+<text>结束时间</text>
+<view>{{detailObj.endTime}}</view>
+</view>
+<view class="detail_item">
+<image class="detail_icon" src="/icons/detail_icon/address.png"></image>
+<text>地点</text>
+<view>{{detailObj.locationName}}</view>
+</view>
+<view class="detail_item">
+<image class="detail_icon" src="/icons/detail_icon/require.png"></image>
+<text>要求</text>
+<view>{{detailObj.require}}</view>
+</view>
+<view class="detail_item" bindtap="memberList">
+<image class="detail_icon" src="/icons/detail_icon/member.png"></image>
+<text>成员</text>
+<view>{{detailObj.memberCount}}</view>
+</view>
+</view>
+<view class="line"></view>
+
+<view class="comment">
+<view class="comment_top">
+<view class="circle"></view>
+<text>提问({{detailObj.commentCount}})</text>
+<view class="comment_btn" bindtap="showComment">发表</view>
+</view>
+<block wx:for="{{commentList}}" wx:key="{{index}}">
+<view class="commentWrap" data-commentid="{{item.commentId}}" data-userid="{{item.userId}}" data-nickname="{{item.userNickname}}" data-tocontent="{{item.content}}" bindtap="showReply" bindlongpress="delComment" >
+<view class="commentTmp_top">
+<image src="{{item.avatar}}" data-id="{{item.userId}}" bindtap="goPersonal"></image>
+<view class="name_content">
+<text>{{item.userNickname}}</text>
+<text>{{item.content}}</text>
+</view>
+</view>
+<view class="commentTmp_bottom">
+<text class="commentTime">{{item.publishTime}}</text>
+<view class="commentReplyCount"  data-obj="{{item}}" bindtap="toReplyDetail">
+{{item.replyCount}}条回复 >
+</view>
+</view>
+</view>
+</block>
+<view hidden="{{loadingMoreHidden ? true : false}}" class="no-more-goods">没有更多啦</view>
+<!-- 发表评论 -->
+  <view class="release">
+    <view  wx:if="{{reply}}" class="replyinfo1">
+      <text class="text">回复{{userNickname}}</text>
+      <view class="cancel" bindtap="cancleReply">取消回复</view>
+    </view>
+    <view wx:if="{{reply||comment}}" class="replyinfo2">
+      <textarea fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" placeholder="请输入" value="{{content}}" bindinput="contentInput"></textarea>
+      <view bindtap="submitForm" class="submit">发送</view>
+    </view>
+  </view>
+
+<view></view>
+</view>
+
+</view>

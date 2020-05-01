@@ -1,0 +1,65 @@
+/* pages/notice/notice.wxss */
+/* pages/good/good.wxss */
+/* pages/reply/reply.wxss */
+/* pages/good/good.wxss */
+.list_item{
+  display: flex;
+  width: 100%;
+  height: 180rpx;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+}
+.list_item image{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  margin: 0 30rpx;
+}
+.list_item view:nth-of-type(1){
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 120rpx;
+}
+.list_item view text:nth-of-type(2){
+  font-size: 30rpx;
+  margin-top: 8rpx;
+}
+.list_item view text:nth-of-type(3){
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 12rpx;
+}
+.list_item .option{
+  width: 280rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.list_item .option view:nth-of-type(1){
+  width: 130rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 28rpx;
+  color: #fff;
+  background: rgb(37, 182, 7);
+  margin-right: 15rpx;
+}
+.list_item .option view:nth-of-type(2){
+  width: 130rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 28rpx;
+  color: #fff;
+  background: #FF6029;
+}
+.status{
+  color: #999;
+}

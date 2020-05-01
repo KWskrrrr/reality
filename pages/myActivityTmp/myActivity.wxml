@@ -1,0 +1,21 @@
+<template name="myActivityTmp">
+<view class="myActivityTmp_t">
+<text>{{publishTime}}</text>
+<text class="tag">{{applyStatus?'已完成':'未完成'}}</text>
+</view>
+<view class="myActivityTmp_m">
+<image src="{{image}}"></image>
+<view class="detail">
+<view class="detial_title">{{activityName}}</view>
+<view class="detail_time">{{beginTime}}--{{endTime}}</view>
+<view class="detail_address">
+<image src="/icons/address.png"></image>
+{{locationName}}
+</view>
+</view>
+</view>
+<view class="num" >共{{memberCount}}人</view>
+<view class="cancle">
+<view class="cancle_btn" bindtap="cancle">取消活动</view>
+</view>
+</template>

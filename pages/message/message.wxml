@@ -1,0 +1,46 @@
+<view>
+<view class="message_nav">
+<view class="message_item" bindtap="notice">
+<view class="babel" wx:if="{{applyCount!=0}}">{{applyCount}}</view>
+<image src="/icons/notice.png" class="notice"></image>
+<text>通知</text>
+</view>
+<view class="message_item" bindtap="good">
+<view class="babel"  wx:if="{{likeCount!=0}}">{{likeCount}}</view>
+<image src="/icons/good1.png" class="good"></image>
+<text>赞</text>
+</view>
+<view class="message_item" bindtap="reply">
+<view class="babel"  wx:if="{{replyCount!=0}}">{{replyCount}}</view>
+<image src="/icons/email.png" class="reply"></image>
+<text>回复</text>
+</view>
+<view class="message_item" bindtap="follow">
+<view class="babel"  wx:if="{{followCount!=0}}">{{followCount}}</view>
+<image src="/icons/favorite.png" class="follow"></image>
+<text>关注</text>
+</view>
+
+</view>
+
+
+<view class="message_panel"></view>
+<view class="panel_top">
+<view class="circle"></view>
+<text>最近私聊消息</text>
+</view>
+
+
+<view class="info" wx:for="{{message}}" wx:key="{{index}}">
+<image src="{{item.toAvatar}}" data-id="{{item.toUserId}}" bindtap="goPersonal"></image>
+<view class="message_left" data-touserid="{{item.toUserId}}" bindtap="toChat" data-toavatar="{{item.toAvatar}}" data-tonickname="{{item.toUserNickname}}">
+<view class="username">{{item.toUserNickname}}</view>
+<view class="message">{{item.msg}}</view>
+</view>
+<view class="message_right">
+<view class="time">{{item.publishTime}}</view>
+<view class="num" wx:if="{{item.unReadCount}}">{{unReadCount}}</view>
+</view>
+</view>
+
+</view>

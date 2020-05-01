@@ -1,0 +1,29 @@
+<view>
+      <scroll-view scroll-x class="nav" scroll-with-animation >
+            <view class="nav-item" wx:for="{{college}}" wx:key="id" bindtap="collegeSelect" data-id="{{index}}">
+                  <view class="nav-text {{index==collegeCur+1?'tab-on':''}}">{{item.name}}</view>
+            </view>
+      </scroll-view>
+
+<block wx:if="{{collegeCur==-1}}">
+      <view  wx:for="{{followList}}" wx:key="index" class="list_item">
+      <image src="{{item.avatar}}" data-id="{{item.userId}}" bindtap="goPersonal"></image>
+      <text>{{item.userNickname}}</text>
+      </view>
+      <view class="nocontent" wx:if="{{followList.length==0}}">
+      <image src="/images/blank.png"></image>
+      <view class="blank_text">您暂时还没有关注任何人~</view>
+</view>
+</block>
+
+<block wx:if="{{collegeCur==0}}">
+       <view wx:for="{{fansList}}" wx:key="index" class="list_item">
+      <image src="{{item.avatar}}" data-id="{{item.userId}}" bindtap="goPersonal"></image>
+      <text>{{item.userNickname}}</text>
+      </view>
+      <view class="nocontent" wx:if="{{fansList.length==0}}">
+      <image lazy-load src="/images/blank.png"></image>
+      <view class="blank_text">暂时还没有人关注你噢~</view>
+</view>
+</block>
+</view>

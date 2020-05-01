@@ -1,0 +1,20 @@
+<!--pages/reply/reply.wxml-->
+<block wx:for="{{reply}}" wx:key="{{index}}">
+      <view class="list_item" >
+      <image src="{{item.avatar}}" data-id="{{item.userId}}" bindtap="goPersonal"></image>
+      <view class="column">
+      <text>{{item.userNickname}}</text>
+      <text>{{item.content}}</text>
+      <view class="reply">
+      <view>回复了你</view>
+      <view>{{item.publishTime}}</view>
+      </view>
+      </view>
+      <view class="toContent" data-flag="{{item.flag}}" data-itemid="{{item.itemId}}" bindtap="goItem">
+      {{item.toContent}}</view>
+      </view>
+</block>
+<view class="nocontent" wx:if="{{reply.length==0}}">
+      <image lazy-load src="/images/blank.png"></image>
+      <view class="blank_text">暂时还没有回复噢~</view>
+</view>

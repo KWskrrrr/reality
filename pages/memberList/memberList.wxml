@@ -1,0 +1,11 @@
+<!--pages/memberList/memberList.wxml-->
+<block wx:for="{{memberList}}" wx:key="index" >
+      <view class="list_item">
+      <image src="{{item.avatar}}" data-id="{{item.userId}}" bindtap="goPersonal"></image>
+      <text>{{item.userNickname}}</text>
+      </view>
+</block>
+<view class="nocontent" wx:if="{{memberList.length==0}}">
+      <image lazy-load src="/images/blank.png"></image>
+      <view class="blank_text">暂时还没有人加入~</view>
+</view>

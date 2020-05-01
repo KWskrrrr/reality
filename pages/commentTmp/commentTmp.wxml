@@ -1,0 +1,20 @@
+<template name="commentTmp">
+<view class="commentWrap">
+<view class="commentTmp_top">
+<image src="{{avatar}}"></image>
+<view class="name_content">
+<text>{{username}}</text>
+<text>{{content}}</text>
+</view>
+</view>
+
+<view class="commentTmp_bottom">
+<text class="commentTime">{{commentTime}}</text>
+<view>
+<image src="/icons/comments.png"></image>
+<text class="commentReplyCount">{{commentReplyCount}}</text>
+</view>
+</view>
+
+</view>
+</template>

@@ -1,0 +1,91 @@
+/* pages/dynamicPub/dynamicPub.wxss */
+.wrap{
+  width: 100vw;
+  height: 100vh;
+  background: #eee;
+
+}
+.panel{
+  width: 100%;
+  height: 680rpx;
+  background: #fff;
+}
+textarea{
+  width: 100%;
+  height: 200rpx;
+  padding-top: 40rpx;
+  padding-left: 20rpx;
+}
+.panel_item{
+  width: 90%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(37, 35, 35);
+  margin: 0 auto;
+  border-bottom: 1rpx solid #eee;
+}
+.chooseAddress{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 30rpx;
+  color: #979797;
+}
+.chooseAddress input{
+  width: 200rpx;
+}
+.chooseAddress image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.upload{
+  width: 100%;
+  min-height: 180rpx;
+  padding: 30rpx 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.uploadImg image{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+  background: #FF6029;
+  margin-right: 15rpx;
+}
+.uploadIcon{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+  background: #FF6029;
+  text-align: center;
+  z-index: 99;
+}
+.uploadIcon image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 50rpx;
+}
+.picker{
+  font-size: 30rpx;
+  color: #979797;
+}
+.btnWrap{
+  background: #eee;
+  width: 100%;
+  height: 100rpx;
+  padding: 40rpx 0;
+}
+.publishBtn{
+  width: 300rpx;
+  height: 80rpx;
+  margin: 0rpx auto;
+  font-size: 30rpx;
+  color: #fff;
+  background: #FF6029;
+  border-radius: 20rpx;
+  text-align: center;
+}

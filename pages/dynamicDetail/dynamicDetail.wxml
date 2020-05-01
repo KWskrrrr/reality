@@ -1,0 +1,61 @@
+<!--pages/dynamicDetail/dynamicDetail.wxml-->
+<view>
+<view class="info">
+<image src="{{dynamic.avatar}}" data-id="{{dynamic.userId}}" bindtap="goPersonal"></image>
+<view class="text">
+<view class="username">{{dynamic.userNickname}}</view>
+<view class="time">{{dynamic.publishTime}}</view>
+</view>
+<!-- <view class="theme">关注</view> -->
+</view>
+<!-- 动态详情 -->
+<view class="content">
+<view class="content_text">{{dynamic.content}}</view>
+<view class="picture">
+<block class="picture" wx:for="{{dynamic.imageList}}" wx:key="{{index}}">
+<image src="{{item}}" class="picture_item"></image>
+</block>
+</view>
+<view class="address">
+<image src="/icons/address.png"></image>
+<text>{{dynamic.publishLocation}}</text>
+</view>
+<!-- 点赞评论 -->
+<view class='like_comment'>
+<image src="{{dynamic.isLike?'/icons/good-fill.png':'/icons/good.png'}}" data-islike="{{dynamic.isLike}}" id="good" bindtap="like"></image>
+<text>{{dynamic.likeCount}}</text>
+<image src='/icons/comments.png'></image>
+<text>{{dynamic.commentCount}}</text>
+<image src="/icons/ellipsis.png"></image>
+</view>
+</view>
+
+<block wx:for="{{commentList}}" wx:key="{{index}}">
+<view class="commentWrap" data-index="{{item.commentId}}" data-userid="{{item.userId}}" data-nickname="{{item.userNickname}}" data-tocontent="{{item.content}}" bindtap="showReply" >
+<view class="commentTmp_top">
+<image src="{{item.avatar}}"></image>
+<view class="name_content">
+<text>{{item.userNickname}}</text>
+<text>{{item.content}}</text>
+</view>
+</view>
+<view class="commentTmp_bottom">
+<text class="commentTime">{{item.publishTime}}</text>
+<view class="commentReplyCount"  data-obj="{{item}}" bindtap="toReplyDetail">
+{{item.replyCount}}条回复 >
+</view>
+</view>
+</view>
+</block>
+<!-- 发表评论 -->
+  <view class="release">
+    <view  wx:if="{{reply}}" class="replyinfo1">
+      <textarea fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" placeholder="回复{{userNickname}}" value="{{content}}" bindinput="contentInput"></textarea>
+      <view bindtap="submitForm" class="submit">发送</view>
+    </view>
+    <view wx:else class="replyinfo2">
+      <textarea fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" placeholder="请输入" value="{{content}}" bindinput="contentInput"></textarea>
+      <view bindtap="submitForm" class="submit">发送</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+<!--pages/personal/personal.wxml-->
+<view>
+<view class="bg">
+<image src="/images/chai.jpg"></image>
+<view class="userInfo">
+<view class="avatar">
+<image src="{{avatar}}"></image>
+</view>
+<view class="nickName">{{userNickname}}</view>
+<view class="btn" wx:if="{{!followStatus}}" bindtap="follow">+关注</view>
+<view class="btn" wx:else bindtap="cancelFollow">已关注</view>
+</view>
+</view>
+
+<view class="center_box">
+      <view class="center_1" data-index="1" bindtap="goList">
+            <text>{{focusCount}}</text>
+            <text>关注</text>
+      </view>
+      <view class="center_1" data-index="2"  bindtap="goList">
+            <text>{{fanCount}}</text>
+            <text>粉丝</text>
+      </view>
+</view>
+<view class="line"></view>
+<view class="bottom_box">
+            <view class="bottom_card" bindtap="myPublish">
+            <view class="bottom_1">
+                  <image src="/icons/more.png"></image>
+                  <view>Ta的发布</view>
+            </view>
+            <image src="/icons/go.png"></image>
+      </view>
+      <view class="bottom_card" bindtap="myDynamic">
+            <view class="bottom_1">
+                  <image src="/icons/more.png"></image>
+                  <view>Ta的动态</view>
+            </view>
+            <image src="/icons/go.png"></image>
+      </view>
+</view>
+
+<view class="fix_box">
+      <view class="fix_1">
+      <view wx:if="{{!followStatus}}" bindtap="follow">+关注</view>
+      <view  wx:else bindtap="cancelFollow">已关注</view>
+      </view>
+      <view class="fix_2"  bindtap="goChat">
+      聊天
+      </view>
+</view>
+
+</view>
+
+

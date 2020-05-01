@@ -1,0 +1,18 @@
+/* pages/memberList/memberList.wxss */
+.list_item{
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+}
+.list_item image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 0 30rpx;
+}
+.list_item text{
+  flex: 1;
+}

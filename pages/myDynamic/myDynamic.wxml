@@ -1,0 +1,38 @@
+<!--pages/myDynamic/myDynamic.wxml-->
+<view class="nocontent" wx:if="{{myDynamic.length==0}}">
+      <image lazy-load src="/images/blank.png"></image>
+      <view class="blank_text">您还没有发表过动态~</view>
+</view>
+<block w:else wx:for="{{myDynamic}}" wx:key="{{index}}" >
+<view>
+<view class="info">
+<image src="{{item.avatar}}" data-id="{{item.userId}}" bindtap="goPersonal"></image>
+<view class="text">
+<view class="username">{{item.userNickname}}</view>
+<view class="time">{{item.publishTime}}</view>
+</view>
+<!-- <view class="theme">关注</view> -->
+</view>
+<!-- 动态详情 -->
+<view class="content"  bindtap="toDetail" data-index="{{item.dynamicId}}" bindlongtap="deleteDynamic">
+<view class="content_text">{{item.content}}</view>
+<view class="picture">
+<block class="picture" wx:for="{{item.imageList}}" wx:key="{{index}}">
+<image src="{{item}}" class="picture_item"></image>
+</block>
+</view>
+<view class="address">
+<image src="/icons/address.png"></image>
+<text>{{item.publishLocation}}</text>
+</view>
+<!-- 点赞评论 -->
+<view class='like_comment'>
+<image src="{{item.isLike?'/icons/good-fill.png':'/icons/good.png'}}" id="good"></image>
+<text>{{item.likeCount}}</text>
+<image src='/icons/comments.png'></image>
+<text>{{item.commentCount}}</text>
+<image src="/icons/ellipsis.png"></image>
+</view>
+</view>
+</view>
+</block>

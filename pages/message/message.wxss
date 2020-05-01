@@ -1,0 +1,121 @@
+.message_nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.message_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 60rpx;
+  padding-bottom: 20rpx;
+  position: relative;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.notice{
+  background: rgb(103, 202, 241);
+}
+.good{
+  background: rgb(240, 193, 92);
+}
+.reply{
+  background: rgb(14, 226, 127);
+}
+.follow{
+  background: rgb(243, 109, 109);
+}
+.message_item image{
+  width: 70rpx;
+  height: 70rpx;
+  padding: 15rpx;
+  border-radius: 50%;
+}
+.babel{
+  color: #fff;
+  background: red;
+  width: 60rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50rpx;
+  position: absolute;
+  top: 18%;
+  left: 60%;
+  margin-bottom: 40rpx;
+  font-size: 25rpx;
+  text-align: center;
+}
+
+/* 消息面板 */
+.panel_top{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  font-size: 30rpx;
+  align-items: center;
+  background: #eee;
+
+}
+.circle{
+  width: 20rpx;
+  height: 20rpx;
+  background: rgb(247, 148, 55);
+  border-radius: 50%;
+  margin-left: 30rpx;
+  margin-right: 15rpx;
+}
+.info{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+}
+.info image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+.message_left .message_right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.message_left{
+  flex: 1;
+}
+.message_right{
+  margin-right: 20rpx;
+}
+.username{
+  font-size: 30rpx;
+  font-weight: 600;
+  color: rgb(8, 53, 83);
+}
+.time{
+  font-size: 20rpx;
+  color: #999;
+}
+.message{
+  color: #999;
+  font-size: 25rpx;
+  margin-top: 15rpx;
+}
+.num{
+  color: #fff;
+  background: rgb(8, 53, 83);
+  border-radius: 50%;
+  width: 30rpx;
+  height: 30rpx;
+  font-size: 22rpx;
+  text-align: center;
+  margin-top: 15rpx;
+  float: right;
+}

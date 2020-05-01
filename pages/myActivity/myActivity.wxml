@@ -1,0 +1,91 @@
+<import src="/pages/myActivityTmp/myActivity.wxml"/>
+<view>
+      <scroll-view scroll-x class="nav" scroll-with-animation >
+            <view class="nav-item" wx:for="{{college}}" wx:key="id" bindtap="collegeSelect" data-id="{{index}}">
+                  <view class="nav-text {{index==collegeCur+1?'tab-on':''}}">{{item.name}}</view>
+            </view>
+      </scroll-view>
+<view class="line"></view>
+<!-- 全部 -->
+<block wx:if="{{collegeCur==-1}}">
+<view  wx:for="{{myActivity}}" wx:key="{{index}}">
+<view data-index="{{item.activityId}}" bindtap="toDetail">
+<view class="myActivityTmp_t">
+<text>{{item.publishTime}}</text>
+<text class="tag">{{item.applyStatus==2?'已同意':'未同意'}}</text>
+</view>
+<view class="myActivityTmp_m">
+<image src="{{item.image}}"></image>
+<view class="detail">
+<view class="detial_title">{{item.activityName}}</view>
+<view class="detail_time">{{item.beginTime}}--{{item.endTime}}</view>
+<view class="detail_address">
+<image src="/icons/address.png"></image>
+{{item.locationName}}
+</view>
+</view>
+</view>
+<view class="num" >共{{item.memberCount}}人</view>
+<view class="cancle">
+<view class="cancle_btn" data-index="{{item.activityId}}" bindtap="exit">退出活动</view>
+</view>
+</view>
+</view>
+</block>
+<!-- 已完成 -->
+<block wx:elif="{{collegeCur==0}}">
+<view wx:for="{{finished}}" wx:key="{{index}}" >
+<view data-index="{{item.activityId}}" bindtap="toDetail">
+<view class="myActivityTmp_t">
+<text>{{item.publishTime}}</text>
+<text class="tag">{{item.applyStatus==2?'已同意':'未同意'}}</text>
+</view>
+<view class="myActivityTmp_m">
+<image src="{{item.image}}"></image>
+<view class="detail">
+<view class="detial_title">{{item.activityName}}</view>
+<view class="detail_time">{{item.beginTime}}--{{item.endTime}}</view>
+<view class="detail_address">
+<image src="/icons/address.png"></image>
+{{item.locationName}}
+</view>
+</view>
+</view>
+<view class="num" >共{{item.memberCount}}人</view>
+<view class="cancle">
+<view class="cancle_btn" data-index="{{item.activityId}}" bindtap="exit">退出活动</view>
+</view>
+</view>
+</view>
+</block>
+<!-- 未完成 -->
+<block  wx:else>
+<view wx:for="{{unfinished}}" wx:key="{{index}}">
+<view data-index="{{item.activityId}}" bindtap="toDetail">
+<view class="myActivityTmp_t">
+<text>{{item.publishTime}}</text>
+<text class="tag">{{item.applyStatus==2?'已同意·':'未同意'}}</text>
+</view>
+<view class="myActivityTmp_m">
+<image src="{{item.image}}"></image>
+<view class="detail">
+<view class="detial_title">{{item.activityName}}</view>
+<view class="detail_time">{{item.beginTime}}--{{item.endTime}}</view>
+<view class="detail_address">
+<image src="/icons/address.png"></image>
+{{item.locationName}}
+</view>
+</view>
+</view>
+<view class="num" >共{{item.memberCount}}人</view>
+<view class="cancle">
+<view class="cancle_btn" data-index="{{item.activityId}}" bindtap="exit">退出活动</view>
+</view>
+</view>
+</view>
+</block>
+<view class="nocontent" wx:if="{{myActivity.length==0}}">
+      <image lazy-load src="/images/blank.png"></image>
+      <view class="blank_text">您还没有加入活动~</view>
+</view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/replyDetail/replyDetail.wxml-->
+<!-- 楼主评论 -->
+<view class="firstComment"  data-fromuserid="{{firstComment.userId}}" data-nickname="{{firstComment.userNickname}}" data-tocontent="{{firstComment.content}}" bindtap="reply">
+<image src="{{firstComment.avatar}}"></image>
+<view class="name_content">
+<text class="nickname">{{firstComment.userNickname}}</text>
+<text>{{firstComment.content}}</text>
+<text class="commentTime">{{firstComment.publishTime}}</text>
+</view>
+</view>
+<view class="line"></view>
+<view class="replyNum">{{replyList.length}}条回复 ></view>
+<!-- 回复 -->
+<block wx:for="{{replyList}}" wx:key="{{index}}">
+<view class="replyWrap" data-replyid="{{item.replyId}}" data-touserid="{{item.toUserId}}" data-nickname="{{item.fromNickname}}" data-fromuserid="{{item.fromUserId}}" data-tocontent="{{item.content}}" bindtap="reply" bindlongpress="delReply" >
+<image src="{{item.avatar}}"></image>
+<view class="name_content">
+<text class="nickname">{{item.fromNickname}}</text>
+<text class="replyTime">{{item.publishTime}}</text>
+<view class="replyNickname">回复<text class="nickname">{{item.toNickname}}：</text></view>
+<text>{{item.content}}</text>
+</view>
+</view>
+</block>
+<!-- 发表评论 -->
+  <view class="release">
+    <view class="replyinfo1">
+      <textarea fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" placeholder="回复{{toNickname}}" value="{{content}}" bindinput="contentInput"></textarea>
+      <view bindtap="submitForm" class="submit">发送</view>
+    </view>
+  </view>

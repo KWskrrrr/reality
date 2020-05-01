@@ -1,0 +1,99 @@
+@import '/pages/activityTmp/activityTmp.wxss';
+.search_box{
+  width: 100%;
+  height: 100rpx;
+  background: #FF6029;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search_box picker{
+  width: 20%;
+  height: 60rpx;
+  color: #fff;
+  z-index: 999;
+}
+.picker{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picker image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.search{
+  width: 70%;
+  height: 60rpx;
+  padding: 0 3%;
+  background: #fff;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner{
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+}
+.banner image{
+  width: 100%;
+  height: 400rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 0;
+  z-index: -1;
+}
+.swiper{
+  width: 90%;
+  height: 350rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 5%;
+  z-index: 99;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.swiper image{
+  height: 350rpx;
+}
+/* 九宫格 */
+.grid{
+  width: 100%;
+  height: 400rpx;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 150rpx 150rpx 150rpx;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.item{
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  margin-top: 25rpx;
+}
+.item image{
+  width: 70rpx;
+  height: 70rpx;
+  margin-bottom:10rpx;
+}
+.newPublish{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background: #eee;
+}
+
+.newText{
+  margin-left: 5rpx;
+  color: #FF6029;
+  font-size: 35rpx;
+}

@@ -1,0 +1,48 @@
+<view>
+<view class="bg">
+<image src="/images/chai.jpg"></image>
+<view class="userInfo">
+<view class="avator">
+<image src="{{avatarUrl}}"></image>
+</view>
+<view class="nickName">{{userNickname}}</view>
+</view>
+</view>
+
+<view class="center_box">
+      <view class="center_1" data-index="1" bindtap="goList">
+            <text>{{follow_count}}</text>
+            <text>关注</text>
+      </view>
+      <view class="center_1" data-index="2"  bindtap="goList">
+            <text>{{fans_count}}</text>
+            <text>粉丝</text>
+      </view>
+</view>
+<view class="line"></view>
+<view class="bottom_box">
+      <view class="bottom_card" bindtap="myActivity">
+            <view class="bottom_1">
+                  <image src="/icons/more.png"></image>
+                  <view>我的参与</view>
+            </view>
+            <image src="/icons/go.png"></image>
+      </view>
+            <view class="bottom_card" bindtap="myPublish">
+            <view class="bottom_1">
+                  <image src="/icons/more.png"></image>
+                  <view>我的发布</view>
+            </view>
+            <image src="/icons/go.png"></image>
+      </view>
+      <view class="bottom_card" bindtap="myDynamic">
+            <view class="bottom_1">
+                  <image src="/icons/more.png"></image>
+                  <view>我的动态</view>
+            </view>
+            <image src="/icons/go.png"></image>
+      </view>
+</view>
+
+
+</view>

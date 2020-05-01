@@ -1,0 +1,2 @@
+/* pages/suggest/suggest.wxss */
+@import '/pages/activityTmp/activityTmp.wxss';

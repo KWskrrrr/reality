@@ -1,0 +1,16 @@
+<!--pages/good/good.wxml-->
+<block wx:for="{{good}}" wx:key="{{index}}">
+      <view class="list_item">
+      <image src="{{item.avatar}}" data-userid="{{item.userId}}" bindtap="goPersonal"></image>
+      <view>
+      <text>{{item.userNickname}}</text>
+      <text>赞了你</text>
+      <text>{{item.publishTime}}</text>
+      </view>
+      <image src="{{item.image}}" data-id="{{item.dynamicId}}" bindtap="goDynamic"></image>
+      </view>
+</block>
+<view class="nocontent" wx:if="{{good.length==0}}">
+      <image lazy-load src="/images/blank.png"></image>
+      <view class="blank_text">暂时还没有人赞你噢~</view>
+</view>

@@ -1,0 +1,17 @@
+<!--pages/follow/follow.wxml-->
+<block wx:for="{{follow}}" wx:key="{{index}}">
+      <view class="list_item">
+      <image src="{{item.avatar}}" data-id="{{item.userId}}" bindtap="goPersonal"></image>
+      <view>
+      <text>{{item.userNickname}}</text>
+      <text>关注了你</text>
+      <text>{{item.publishTime}}</text>
+      </view>
+      <view wx:if="{{!item.isMutualFollow}}" data-id="{{item.userId}}" bindtap="followBack">+回关</view>
+      <view wx:else data-id="{{item.userId}}" bindtap="cancelFollow">互相关注</view>
+      </view>
+</block>
+<view class="nocontent" wx:if="{{follow.length==0}}">
+      <image lazy-load src="/images/blank.png"></image>
+      <view class="blank_text">暂时还没有新的人关注你噢~</view>
+</view>

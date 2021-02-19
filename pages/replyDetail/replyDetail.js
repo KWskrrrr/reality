@@ -132,7 +132,11 @@ delReply(event){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     let obj=JSON.parse(options.obj)
+    console.log('====',options.obj,typeof options.obj)
+    let obj=options.obj
+    if(typeof options.obj!=="object") {
+      obj=JSON.parse(options.obj)
+    }
      console.log("obj",obj)
     // 设置楼主评论信息
     this.setData({

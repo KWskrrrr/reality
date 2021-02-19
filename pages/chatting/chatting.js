@@ -127,7 +127,8 @@ this.onLoad(this.data._options);
    */
   socketStart: function () {
 // socket 连接地址
-var socketUrl = 'https://www.realityclub6.com?userId='+this.data.userId+'&pageSign=chatPage&token=1234'
+// var socketUrl = 'https://www.realityclub6.com?userId='+this.data.userId+'&pageSign=chatPage&token=1234'
+var socketUrl = 'ws://127.0.0.1:9999?userId='+this.data.userId+'&pageSign=chatPage&token=1234'
     // 设置socket连接地址 socketUrl
     const socket = (this.socket = io(
       socketUrl,

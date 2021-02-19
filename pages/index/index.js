@@ -125,6 +125,7 @@ Page({
       })
     }else if(index==2){
       WXAPI.activitybyHot({
+        userId: app.globalData.userId,
         pageNum: this.data.curPage,
         pageSize: this.data.pageSize
       }).then(function(res) {

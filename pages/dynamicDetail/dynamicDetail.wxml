@@ -47,6 +47,10 @@
 </view>
 </view>
 </block>
+<view class="line"></view>
+<view class="line"></view>
+<view class="line"></view>
+<view class="line"></view>
 <!-- 发表评论 -->
   <view class="release">
     <view  wx:if="{{reply}}" class="replyinfo1">

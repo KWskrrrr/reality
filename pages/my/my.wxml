@@ -1,6 +1,6 @@
 <view>
 <view class="bg">
-<image src="/images/chai.jpg"></image>
+<image src="{{backImage}}"></image>
 <view class="userInfo">
 <view class="avator">
 <image src="{{avatarUrl}}"></image>
@@ -8,14 +8,15 @@
 <view class="nickName">{{userNickname}}</view>
 </view>
 </view>
-
+<view class="line"></view>
+<view class="line"></view>
 <view class="center_box">
       <view class="center_1" data-index="1" bindtap="goList">
-            <text>{{follow_count}}</text>
+            <text>{{focusCount}}</text>
             <text>关注</text>
       </view>
       <view class="center_1" data-index="2"  bindtap="goList">
-            <text>{{fans_count}}</text>
+            <text>{{fanCount}}</text>
             <text>粉丝</text>
       </view>
 </view>

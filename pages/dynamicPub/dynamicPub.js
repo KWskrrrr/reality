@@ -97,9 +97,15 @@ Page({
         "content":that.data.content
       }).then(function(res){
         console.log(res);
-        wx.reLaunch({
-          url: '/pages/find/find',
-        })
+        if(res.code!=200) {
+          wx.showToast({
+            title: '发布失败',
+          })
+        }else {
+          wx.reLaunch({
+            url: '/pages/find/find',
+          })
+        }
       })
   },
   /**

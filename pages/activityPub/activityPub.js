@@ -132,9 +132,18 @@ Page({
         "userId": that.data.userId
       }).then(function(res){
         console.log(res);
-        wx.reLaunch({
-          url: '/pages/index/index',
-        })
+        if(res.code!=200) {
+          wx.showToast({
+            title: '发布失败',
+          })
+        }else {
+          wx.showToast({
+            title: '发布成功',
+          })
+          wx.reLaunch({
+            url: '/pages/index/index',
+          })
+        }
       })
   },
   /**

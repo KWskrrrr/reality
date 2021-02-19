@@ -7,12 +7,12 @@
       <text class="ellipsis">申请加入{{item.activityName}}</text>
       <text>{{item.publishTime}}</text>
       </view>
-      <view class="option" wx:if="{{item.applyStatus==0}}">
+      <view class="option" wx:if="{{item.status==0}}">
       <view bindtap="agreeApply" data-id="{{item.userId}}" data-activityid="{{item.activityId}}" >同意</view>
       <view bindtap="disagreeApply" data-id="{{item.userId}}" data-activityid="{{item.activityId}}">拒绝</view>
       </view>
 
-      <view wx:elif="{{item.applyStatus==1}}" class="status">
+      <view wx:elif="{{item.status==1}}" class="status">
       已拒绝
       </view>
       <view wx:else class="status">

@@ -12,7 +12,7 @@
 <view data-index="{{item.activityId}}" bindtap="toDetail">
 <view class="myActivityTmp_t">
 <text>{{item.publishTime}}</text>
-<text class="tag">{{item.applyStatus==2?'已同意':'未同意'}}</text>
+<text class="tag">{{item.status==0?'申请中':item.status==2?'已同意':'未同意'}}</text>
 </view>
 <view class="myActivityTmp_m">
 <image src="{{item.image}}"></image>
@@ -33,12 +33,12 @@
 </view>
 </block>
 <!-- 已完成 -->
-<block wx:elif="{{collegeCur==0}}">
+<block wx:elif="{{collegeCur===0}}">
 <view wx:for="{{finished}}" wx:key="{{index}}" >
 <view data-index="{{item.activityId}}" bindtap="toDetail">
 <view class="myActivityTmp_t">
 <text>{{item.publishTime}}</text>
-<text class="tag">{{item.applyStatus==2?'已同意':'未同意'}}</text>
+<text class="tag">{{item.status==0?'申请中':item.status==2?'已同意':'未同意'}}</text>
 </view>
 <view class="myActivityTmp_m">
 <image src="{{item.image}}"></image>
@@ -59,12 +59,12 @@
 </view>
 </block>
 <!-- 未完成 -->
-<block  wx:else>
+<block wx:else>
 <view wx:for="{{unfinished}}" wx:key="{{index}}">
 <view data-index="{{item.activityId}}" bindtap="toDetail">
 <view class="myActivityTmp_t">
 <text>{{item.publishTime}}</text>
-<text class="tag">{{item.applyStatus==2?'已同意·':'未同意'}}</text>
+<text class="tag">{{item.status==0?'申请中':item.status==2?'已同意':'未同意'}}</text>
 </view>
 <view class="myActivityTmp_m">
 <image src="{{item.image}}"></image>

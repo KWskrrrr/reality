@@ -42,6 +42,19 @@ Page({
       pageSize:that.data.pageSize
     }).then(res=>{
       console.log(res);
+      if(res.code===1314) {
+        wx.showToast({
+          title: '该动态已删除',
+          success: function() {
+            setTimeout(function() {
+              //要延时执行的代码
+              wx.navigateBack({
+                delta: 1
+              })
+            }, 1000) //延迟时间
+          }
+        })
+      }
       that.setData({
         dynamic:res.result
       });

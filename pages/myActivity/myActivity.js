@@ -31,7 +31,7 @@ Page({
   },
   collegeSelect(e) {
     this.setData({
-      collegeCur: e.currentTarget.dataset.id - 1,
+      collegeCur: e.currentTarget.dataset.id-1,
     })
   },
   getMyActivity(){
@@ -86,7 +86,7 @@ Page({
     let finished = [];
     let unfinished = [];
     for (var i = 0; i < res.result.length; i++) {
-      if(res.result[i].applyStatus==2){
+      if(res.result[i].status==2){
         finished.push(res.result[i]);
         this.setData({
           finished:finished

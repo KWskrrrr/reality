@@ -51,6 +51,19 @@ Page({
     }).then(res=>{
        console.log("活动详情",res);
       wx.stopPullDownRefresh()
+      if(res.code===1314) {
+        wx.showToast({
+          title: '该活动已删除',
+          success: function() {
+            setTimeout(function() {
+              //要延时执行的代码
+              wx.navigateBack({
+                delta: 1
+              })
+            }, 1000) //延迟时间
+          }
+        })
+      }
       that.setData({
         detailObj:res.result
       });
@@ -79,9 +92,16 @@ Page({
         activityId:this.data.itemId
       }).then(res=>{
         console.log(res);
-        wx.showToast({
-          title: '已发送请求',
-        })
+        if(res.code===200) {
+          wx.showToast({
+            title: '请求成功',
+          })
+        }else {
+          wx.showToast({
+            title: '请求失败',
+          })
+        }
+        
       })
       lastTime=nowTime
     }
@@ -94,9 +114,15 @@ Page({
       activityId:this.data.itemId
     }).then(res=>{
       console.log(res);
-      wx.showToast({
-        title: '已取消加入',
-      })
+      if(res.code===200) {
+        wx.showToast({
+          title: '已取消加入',
+        })
+      }else {
+        wx.showToast({
+          title: '取消失败',
+        })
+      }
     })
     lastTime=nowTime
   }

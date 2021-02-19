@@ -16,13 +16,13 @@
 <image src="/images/bg.jpg"></image>
 <swiper indicator-dots  autoplay class="swiper">
 <swiper-item>
-<image src='/images/chai.jpg'></image>
+<image src='/images/上官婉儿.jpeg'></image>
 </swiper-item>
 <swiper-item>
-<image src='/images/exo.jpg'></image>
+<image src='/images/不知火舞.jpeg'></image>
 </swiper-item>
 <swiper-item>
-<image src='/images/exo0.jpg'></image>
+<image src='/images/武则天.jpeg'></image>
 </swiper-item>
 </swiper>
 </view>

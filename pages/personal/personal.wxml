@@ -1,7 +1,7 @@
 <!--pages/personal/personal.wxml-->
 <view>
 <view class="bg">
-<image src="/images/chai.jpg"></image>
+<image src="{{backImage}}"></image>
 <view class="userInfo">
 <view class="avatar">
 <image src="{{avatar}}"></image>
@@ -11,7 +11,8 @@
 <view class="btn" wx:else bindtap="cancelFollow">已关注</view>
 </view>
 </view>
-
+<view class="line"></view>
+<view class="line"></view>
 <view class="center_box">
       <view class="center_1" data-index="1" bindtap="goList">
             <text>{{focusCount}}</text>

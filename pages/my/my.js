@@ -8,11 +8,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    follow_count:null,
-    fans_count:null,
+    focusCount:0,
+    fanCount:0,
     userId:null,
     avatarUrl:'',
-    userNickname:''
+    userNickname:'',
+    backImage: ''
   },
   onLoad() {
     this.setData({
@@ -21,18 +22,17 @@ Page({
       userNickname:app.globalData.userNickname
     })
     console.log("my",this.data.avatarUrl)
-    WXAPI.followedList({
-      userId:this.data.userId
+    WXAPI.userProfile({
+      userId:app.globalData.userId,
+      myUserId:app.globalData.userId
     }).then(res=>{
       this.setData({
-        follow_count:res.result.length
-      })
-    })
-    WXAPI.fansList({
-      userId:this.data.userId
-    }).then(res=>{
-      this.setData({
-        fans_count:res.result.length
+        userId:app.globalData.userId,
+        avatarUrl:res.result.avatar,
+        userNickname:res.result.userNickname,
+        fanCount:res.result.fanCount,
+        focusCount:res.result.focusCount,
+        backImage: res.result.backImage
       })
     })
   },
@@ -60,5 +60,4 @@ myDynamic(){
   wx.navigateTo({
     url: '/pages/myDynamic/myDynamic?userId='+userId,
   })
-}
-})
+}})

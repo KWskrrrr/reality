@@ -1,6 +1,6 @@
 // const CONFIG=require('./config.js');
-const API_BASE_URL="https://www.realityclub6.com"
-
+// const API_BASE_URL="https://www.realityclub6.com"
+const API_BASE_URL="http://127.0.0.1:9888"
 
 const request= (url,method,data) => {
   let _url = API_BASE_URL + url

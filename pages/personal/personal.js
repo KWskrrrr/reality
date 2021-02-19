@@ -13,7 +13,8 @@ Page({
     focusCount:null,
     userId:null,
     myUserId:null,
-    followStatus:true,
+    followStatus:false,
+    backImage: '',
     _options:{}
   },
 
@@ -38,7 +39,8 @@ Page({
         userNickname:res.result.userNickname,
         fanCount:res.result.fanCount,
         focusCount:res.result.focusCount,
-        followStatus:res.result.isFollow
+        followStatus:res.result.followStatus,
+        backImage: res.result.backImage
       })
       wx.setNavigationBarTitle({
         title: res.result.userNickname,

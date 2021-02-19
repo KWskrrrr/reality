@@ -83,7 +83,8 @@ toChat(event){
    */
   socketStart: function () {
 // socket 连接地址,每个页面通过pageSign进行标识
-var socketUrl = 'https://www.realityclub6.com?userId='+this.data.userId+'=7&pageSign=msgPage&token=1234'
+// var socketUrl = 'https://www.realityclub6.com?userId='+this.data.userId+'=7&pageSign=msgPage&token=1234'
+var socketUrl = 'ws://127.0.0.1:9999?userId='+this.data.userId+'&pageSign=msgPage&token=1234'
     // 设置socket连接地址 socketUrl
     const socket = (this.socket = io(
       socketUrl,
@@ -124,10 +125,10 @@ var socketUrl = 'https://www.realityclub6.com?userId='+this.data.userId+'=7&page
     socket.on('notice', (d) => {
       console.log(d);
       this.setData({
-        replyCount:d.replyCount,
-        followCount:d.followCount,
-        applyCount:d.applyCount,
-        likeCount:d.agreeCount
+        replyCount:d.replyCount|| 0,
+        followCount:d.followCount|| 0,
+        applyCount:d.applyCount|| 0,
+        likeCount:d.agreeCount || 0
       })
     })
 
